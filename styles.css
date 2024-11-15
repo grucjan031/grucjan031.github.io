@@ -1,0 +1,290 @@
+/* Styl ogólny */
+body {
+    font-family: "Lucida Console", "Courier New", monospace;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nagłówek */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px;
+    background-color: black;
+    color: white;
+}
+
+header h1 {
+    color: limegreen;
+    margin: 0;
+}
+
+header h1 a{
+    text-decoration:none;
+    color:lawngreen;
+    background: -webkit-linear-gradient(#2fff05, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+header h1 a:hover{
+    text-decoration:none;
+    color:lawngreen;
+}
+header h2 a{
+    text-decoration:none;
+    color:lawngreen;
+    background: -webkit-linear-gradient(#2fff05, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+header h2 a:hover{
+    text-decoration:none;
+    color:lawngreen;
+}
+
+header h2 {
+    color: greenyellow;
+    margin: 1px 0 0 0;
+    font-weight: normal;
+}
+nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    
+    margin: 10px 0 0 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 150px;
+}
+nav ul li:last-child {
+    margin-right: 0;
+}
+nav ul li a {
+    
+    color: green;
+    font-size: 30px;
+    text-decoration: none;
+    
+}
+
+nav ul li a:hover {
+    color: lawngreen;
+    background-color: none;
+    text-decoration: none; 
+    border-radius: 5px;
+}
+
+/* Główna zawartość */
+main {
+    flex: 1;
+    color: white;
+    background-color: #121212;
+    padding: 20px;
+}
+
+/* Stopka w stylu "fat footer" */
+footer {
+    color:white;
+    background-color: black;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.footer-section {
+    width: 30%;
+    float: left;
+    margin-right: 5%;
+}
+
+.footer-section h3 {
+    margin-top: 0;
+}
+
+
+#cat{
+    width: 100%;
+    height: auto;
+    
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Tworzy responsywne kolumny */
+    padding: 20px;
+    margin-left: 350px;
+    margin-right: 350px;
+    gap: 20px 8px;
+    
+
+    
+}
+.single-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Tworzy responsywne kolumny */
+    padding: 20px;
+    margin-left: 350px;
+    margin-right: 350px;
+
+
+    
+}
+
+.form-group {
+    margin-bottom: 15px;
+    
+    margin-right: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input, .form-group textarea, .form-group button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-group button {
+    background-color: limegreen;
+    font-family: "Lucida Console", "Courier New", monospace; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    
+}
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+/* Styl dla elementów grid */
+.grid-item {
+    
+    background-color: #090a09;
+    border: 1px solid lawngreen;
+    padding: 20px;
+    text-align: left;
+    font-size: 1.2em;
+    border-radius: 8px;
+    object-fit: cover;
+    
+    
+}
+
+.grid-item h1{
+    -webkit-animation: slide-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.grid-item:nth-child(3) {
+    grid-column: 1/3 ; /* Blok 1 w pierwszej kolumnie */
+    align-self: start; /* Pozwól trzeciemu blokowi dostosować swoją wysokość */
+    min-height: 20px; /* Opcjonalnie: ustaw minimalną wysokość, aby kontrolować, jak niski może być blok */
+    margin-bottom: 0;
+}
+.grid-item a{
+    color: green;
+    text-decoration: none;
+}
+.grid-item a:hover{
+    color: lawngreen;
+    text-decoration: none;
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+}
+.links-item{
+    display: grid;
+    padding: 10px;
+    margin-right: 50px;
+        
+}
+.links-item h1{
+    font-size: 22px;
+}
+.links-item a{
+    font-size: 18px;
+    text-decoration: none;
+    color: white
+}
+.links-item a:hover{
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#pralki{
+    color: limegreen;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px; /* Odstęp między ikonami */
+    justify-content: center; /* Wyrównanie ikon na środku */
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 48px; /* Szerokość ikon - można dostosować */
+    height: 48px; /* Wysokość ikon - można dostosować */
+    transition: transform 0.3s ease; /* Animacja przy najechaniu */
+}
+
+.social-icon:hover {
+    transform: scale(1.5); /* Powiększenie ikony przy najechaniu */
+}
+
+footer > .footer-section {
+    margin-bottom: 20px;
+}
+
+/* Selektor pierwszego dziecka */
+.footer-section:first-child {
+    margin-left: 5%;
+}
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-11-15 15:35:55
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
